@@ -1,8 +1,17 @@
+@font-face {
+  font-family: nb;
+  src: url(./media/NBInternationalProBoo.ttf);
+}
+@font-face {
+  font-family: rejoy;
+  src: url(./media/Rejouice-Headline.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+  font-family: nb;
 }
 
 body,
@@ -16,6 +25,23 @@ html {
   background-color: aliceblue;
   position: relative;
 }
+.cursor {
+  height: 7.5vw;
+  width: 7.5vw;
+  background-color: #ff5f38;
+
+  border-radius: 50%;
+  position: fixed;
+  z-index: 9;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.cursor h5 {
+  font-size: 1.15vw;
+  color: rgb(15, 13, 13);
+  font-weight: 100;
+}
 .page1 video {
   height: 100%;
   width: 100%;
@@ -25,7 +51,31 @@ html {
 .page1-content {
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.342);
+  background-color: rgba(0, 0, 0, 0.068);
   position: relative;
-  z-index: 2;
+  z-index: 10;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.589); */
+  justify-content: space-between;
+  padding: 3vw;
+}
+nav h3 {
+  font-size: 1.4vw;
+  font-weight: 100;
+}
+
+.page1-content h1 {
+  font-family: rejoy;
+  font-size: 27vw;
+  font-weight: 100;
+  line-height: 27vw;
 }
