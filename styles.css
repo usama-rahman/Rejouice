@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100%;
+}
+.page1 {
+  width: 100%;
+  height: 100vh;
+  background-color: aliceblue;
+  position: relative;
+}
+.page1 video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+.page1-content {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.342);
+  position: relative;
+  z-index: 2;
+}
