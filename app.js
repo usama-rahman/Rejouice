@@ -1,37 +1,37 @@
-function locoScroll() {
-  gsap.registerPlugin(ScrollTrigger);
+// function locoScroll() {
+//   gsap.registerPlugin(ScrollTrigger);
 
-  const locoScroll = new LocomotiveScroll({
-    el: document.querySelector(".main"),
-    smooth: true,
-  });
-  locoScroll.on("scroll", ScrollTrigger.update);
+//   const locoScroll = new LocomotiveScroll({
+//     el: document.querySelector(".main"),
+//     smooth: true,
+//   });
+//   locoScroll.on("scroll", ScrollTrigger.update);
 
-  ScrollTrigger.scrollerProxy(".main", {
-    scrollTop(value) {
-      return arguments.length
-        ? locoScroll.scrollTo(value, 0, 0)
-        : locoScroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    },
+//   ScrollTrigger.scrollerProxy(".main", {
+//     scrollTop(value) {
+//       return arguments.length
+//         ? locoScroll.scrollTo(value, 0, 0)
+//         : locoScroll.scroll.instance.scroll.y;
+//     },
+//     getBoundingClientRect() {
+//       return {
+//         top: 0,
+//         left: 0,
+//         width: window.innerWidth,
+//         height: window.innerHeight,
+//       };
+//     },
 
-    pinType: document.querySelector(".main").style.transform
-      ? "transform"
-      : "fixed",
-  });
+//     pinType: document.querySelector(".main").style.transform
+//       ? "transform"
+//       : "fixed",
+//   });
 
-  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+//   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-  ScrollTrigger.refresh();
-}
-locoScroll();
+//   ScrollTrigger.refresh();
+// }
+// locoScroll();
 
 function page1Animation() {
   const pageOne = document.querySelector(".page1");
@@ -39,7 +39,7 @@ function page1Animation() {
 
   pageOne.addEventListener("mousemove", function (dets) {
     gsap.to(cursor, {
-      x: dets.clientX,
+      x: dets.x,
       y: dets.clientY,
     });
   });
